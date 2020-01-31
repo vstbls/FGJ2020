@@ -12,7 +12,9 @@ extents = Vector2( 20, 4 )
 script = ExtResource( 2 )
 
 [node name="RigidBody2D" type="RigidBody2D" parent="."]
+input_pickable = true
 mode = 1
+mass = 4.45
 __meta__ = {
 "_edit_group_": true
 }
@@ -25,3 +27,4 @@ offset = Vector2( -32, -32 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
 shape = SubResource( 1 )
+[connection signal="input_event" from="RigidBody2D" to="." method="_on_RigidBody2D_input_event"]
