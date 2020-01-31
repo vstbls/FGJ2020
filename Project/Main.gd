@@ -1,6 +1,10 @@
 extends Node2D
 
-var scene_main_menu = preload("res://Scenes/MainMenu.tscn")
-
 func _ready():
 	pass
+
+
+func _on_start_game():
+	$SceneLoader.change_scene("TestScene")
+	$CanvasLayer/Menu.hide()
+	pass # Replace with function body.
