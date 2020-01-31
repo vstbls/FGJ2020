@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/SceneLoader.gd" type="Script" id=2]
+[ext_resource path="res://Main.gd" type="Script" id=3]
+
+[node name="Root" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="SceneLoader" type="Node2D" parent="."]
+script = ExtResource( 2 )
