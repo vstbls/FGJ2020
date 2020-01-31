@@ -16,7 +16,14 @@ _global_script_class_icons={
 [application]
 
 config/name="FGJ2020"
+run/main_scene="res://test.tscn"
 config/icon="res://icon.png"
+
+[display]
+
+window/size/width=256
+window/size/height=144
+window/stretch/mode="viewport"
 
 [rendering]
 
