@@ -13,15 +13,30 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="TextureButton" type="TextureButton" parent="."]
+[node name="PlayResetButton" type="TextureButton" parent="."]
 anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = -70.0
-margin_top = -70.0
+margin_left = -40.0
+margin_top = -40.0
+rect_scale = Vector2( 0.5, 0.5 )
 texture_normal = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-[connection signal="pressed" from="TextureButton" to="." method="_on_TextureButton_pressed"]
+
+[node name="SpeedButton" type="TextureButton" parent="."]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -80.0
+margin_top = -40.0
+rect_scale = Vector2( 0.5, 0.5 )
+texture_normal = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="PlayResetButton" to="." method="_on_TextureButton_pressed"]
+[connection signal="pressed" from="SpeedButton" to="." method="_on_SpeedButton_pressed"]

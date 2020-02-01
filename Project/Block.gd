@@ -55,3 +55,4 @@ func _input(event):
 		elif Input.is_mouse_button_pressed(BUTTON_LEFT) and can_drag:
 			can_drag = false
 			preventDouble = true
+			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
