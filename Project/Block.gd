@@ -5,9 +5,13 @@ export var isDraggable = false
 var can_drag = false
 
 func _ready():
-	OS.window_size = Vector2(1024,576)
-	if(!isStatic):
-		$RigidBody2D.mode = RigidBody2D.MODE_RIGID
+	$RigidBody2D.mode = RigidBody2D.MODE_STATIC
+	var mass = 0
+	for node in $RigidBody2D.get_children():
+		if(node.is_class("Sprite")):
+			mass += 1
+	$RigidBody2D.mass = mass
+	#print(get_class() + " Mass: " + str(mass))
 	pass
 
 func on_Block_enablePhysics():
@@ -16,11 +20,9 @@ func on_Block_enablePhysics():
 	
 
 func _on_RigidBody2D_input_event(viewport, event, shape_idx):
-	print(isDraggable)
 	if $RigidBody2D.mode == RigidBody2D.MODE_STATIC and isDraggable:
 		if event is InputEventMouseButton:
 			can_drag = event.pressed
-			print("Draggable")
 
 func _process(delta):
 	if Input.is_mouse_button_pressed(BUTTON_LEFT) and can_drag:
