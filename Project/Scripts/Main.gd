@@ -14,3 +14,8 @@ func _on_start_game():
 	$LevelMap.show()
 	$CanvasLayer/SimulationButton.show()
 	pass # Replace with function body.
+
+
+func _on_LevelMap_level_select(selectedlevel):
+	$SceneLoader.change_scene(selectedlevel)
+	$LevelMap.hide()

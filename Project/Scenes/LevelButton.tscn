@@ -46,3 +46,4 @@ __meta__ = {
 }
 [connection signal="button_down" from="TextureButton" to="." method="_on_button_down"]
 [connection signal="button_up" from="TextureButton" to="." method="_on_button_up"]
+[connection signal="pressed" from="TextureButton" to="." method="_on_pressed"]

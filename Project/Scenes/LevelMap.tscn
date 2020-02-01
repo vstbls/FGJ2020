@@ -119,6 +119,7 @@ margin_left = 16.0
 margin_top = 64.0
 margin_right = 29.0
 margin_bottom = 77.0
+level = "Level1"
 
 [node name="Label" parent="Buttons/LevelButton/TextureButton" index="0"]
 text = "1"
