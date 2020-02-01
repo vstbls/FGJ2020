@@ -13,8 +13,6 @@ func _ready():
 		if(node.is_class("Sprite")):
 			mass += 1
 	$RigidBody2D.mass = mass
-	#print(get_class() + " Mass: " + str(mass))
-	#set_process_input(true)
 	set_process(true)
 	pass
 
