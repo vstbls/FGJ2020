@@ -1,13 +1,15 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Sprites/block_grayscale.png" type="Texture" id=1]
 [ext_resource path="res://Block.gd" type="Script" id=2]
+[ext_resource path="res://PhysMat.tres" type="PhysicsMaterial" id=3]
 
 [node name="TetS" type="Node2D"]
 script = ExtResource( 2 )
 
 [node name="RigidBody2D" type="RigidBody2D" parent="."]
 position = Vector2( 12, 8 )
+physics_material_override = ExtResource( 3 )
 
 [node name="Center" type="Node2D" parent="RigidBody2D"]
 position = Vector2( 8, 4 )
