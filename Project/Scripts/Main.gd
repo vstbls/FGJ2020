@@ -22,3 +22,11 @@ func _on_start_game():
 func _on_LevelMap_level_select(selectedlevel):
 	$SceneLoader.change_scene(selectedlevel)
 	$LevelMap.hide()
+
+
+func _on_Menu_open_options():
+	Globals.save_game()
+
+
+func _on_Menu_quit_game():
+	Globals.load_game()
