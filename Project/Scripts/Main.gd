@@ -7,7 +7,8 @@ func _ready():
 
 
 func _on_start_game():
-	$SceneLoader.change_scene("Level1")
+	#$SceneLoader.change_scene("Level1")
 	$CanvasLayer/Menu.hide()
+	$LevelMap.show()
 	$CanvasLayer/SimulationButton.show()
 	pass # Replace with function body.
