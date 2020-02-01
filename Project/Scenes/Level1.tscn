@@ -1,11 +1,13 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Scenes/TetBlocks/TetI.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/TetBlocks/Block_30x1.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/TetBlocks/TetS.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scenes/TetBlocks/TetZ.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/Level1.gd" type="Script" id=6]
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource( 6 )
 
 [node name="Blocks" type="Node2D" parent="."]
 
@@ -27,8 +29,20 @@ position = Vector2( 96, 96 )
 position = Vector2( 40, 80 )
 
 [node name="Block_30x1" parent="Blocks" instance=ExtResource( 2 )]
-position = Vector2( 8, 128 )
+position = Vector2( 8, 137 )
 isStatic = true
 
 [node name="TetZ" parent="Blocks" instance=ExtResource( 4 )]
 position = Vector2( 88, 80 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = -5
+
+[node name="Sprite" type="Sprite" parent="CanvasLayer"]
+position = Vector2( 128, 72 )
+z_index = -2
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
