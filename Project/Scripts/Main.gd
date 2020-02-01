@@ -2,7 +2,7 @@ extends Node2D
 
 func _ready():
 	OS.window_size = Vector2(OS.window_size.x * 3, OS.window_size.y * 3)
-	$CanvasLayer/SimulationButton.hide()
+	$ButtonLayer/SimulationButton.hide()
 	$CanvasLayer/PartShop.hide()
 	var screen_size = OS.get_screen_size()
 	var window_size = OS.window_size
@@ -15,7 +15,7 @@ func _on_start_game():
 	$CanvasLayer/Menu.hide()
 	$CanvasLayer/PartShop.hide()
 	$LevelMap.show()
-	$CanvasLayer/SimulationButton.hide()
+	$ButtonLayer/SimulationButton.hide()
 	pass # Replace with function body.
 
 
@@ -24,7 +24,7 @@ func _on_LevelMap_level_select(selectedlevel):
 	yield($SceneLoader, "scene_changed")
 	$LevelMap.hide()
 	$CanvasLayer/PartShop.show()
-	$CanvasLayer/SimulationButton.show()
+	$ButtonLayer/SimulationButton.show()
 
 func _on_Menu_open_options():
 	Globals.save_game()

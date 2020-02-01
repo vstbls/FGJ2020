@@ -10,9 +10,9 @@ func change_scene(scene):
 	currentScene = scene
 	var loaded_scene = load("res://Scenes/" + scene + ".tscn")
 	var instanced_scene = loaded_scene.instance()
-	var simBtn = get_node("/root/Root/CanvasLayer/SimulationButton")
 	get_node("/root/Root/CanvasLayer/Transition").transition()
 	yield(get_node("/root/Root/CanvasLayer/Transition"), "change_the_scene_right_now")
+	var simBtn = get_node("/root/Root/ButtonLayer/SimulationButton")
 	simBtn.currentLevelNode = instanced_scene
 	if $CanvasLayer.get_child_count() != 0:
 		#var prev_scene = get_node("Level")

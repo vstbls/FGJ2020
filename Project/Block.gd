@@ -55,4 +55,8 @@ func _input(event):
 		elif Input.is_mouse_button_pressed(BUTTON_LEFT) and can_drag:
 			can_drag = false
 			preventDouble = true
+			
+			var currentMousePos = get_global_mouse_position()
+			if(currentMousePos.x > 170 && currentMousePos.y < 50):
+				call_deferred("free")
 			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)

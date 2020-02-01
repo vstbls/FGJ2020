@@ -18,14 +18,17 @@ layer = 2
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="SimulationButton" parent="CanvasLayer" instance=ExtResource( 4 )]
-
 [node name="Menu" parent="CanvasLayer" instance=ExtResource( 1 )]
 
 [node name="PartShop" parent="CanvasLayer" instance=ExtResource( 5 )]
 
 [node name="LevelMap" parent="." instance=ExtResource( 6 )]
 visible = false
+
+[node name="ButtonLayer" type="CanvasLayer" parent="."]
+layer = 2
+
+[node name="SimulationButton" parent="ButtonLayer" instance=ExtResource( 4 )]
 [connection signal="open_options" from="CanvasLayer/Menu" to="." method="_on_Menu_open_options"]
 [connection signal="quit_game" from="CanvasLayer/Menu" to="." method="_on_Menu_quit_game"]
 [connection signal="start_game" from="CanvasLayer/Menu" to="." method="_on_start_game"]
