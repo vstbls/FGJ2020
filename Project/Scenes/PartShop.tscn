@@ -1,0 +1,103 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Sprites/block_grayscale.png" type="Texture" id=1]
+[ext_resource path="res://Scripts/BuyPart.gd" type="Script" id=2]
+[ext_resource path="res://Scripts/BuyPartButton.gd" type="Script" id=3]
+
+[node name="PartShop" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 185.0
+margin_bottom = -104.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 71.0
+margin_bottom = 40.0
+color = Color( 0.470588, 0.470588, 0.470588, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GridContainer" type="GridContainer" parent="ColorRect"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -28.0
+margin_top = -12.0
+margin_right = 28.0
+margin_bottom = 12.0
+custom_constants/vseparation = 8
+custom_constants/hseparation = 8
+columns = 4
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="BuyI" type="TextureButton" parent="ColorRect/GridContainer"]
+margin_right = 8.0
+margin_bottom = 8.0
+texture_normal = ExtResource( 1 )
+script = ExtResource( 3 )
+
+[node name="BuyJ" type="TextureButton" parent="ColorRect/GridContainer"]
+margin_left = 16.0
+margin_right = 24.0
+margin_bottom = 8.0
+texture_normal = ExtResource( 1 )
+script = ExtResource( 3 )
+
+[node name="BuyL" type="TextureButton" parent="ColorRect/GridContainer"]
+margin_left = 32.0
+margin_right = 40.0
+margin_bottom = 8.0
+texture_normal = ExtResource( 1 )
+script = ExtResource( 3 )
+
+[node name="BuyO" type="TextureButton" parent="ColorRect/GridContainer"]
+margin_left = 48.0
+margin_right = 56.0
+margin_bottom = 8.0
+texture_normal = ExtResource( 1 )
+script = ExtResource( 3 )
+
+[node name="BuyS" type="TextureButton" parent="ColorRect/GridContainer"]
+margin_top = 16.0
+margin_right = 8.0
+margin_bottom = 24.0
+texture_normal = ExtResource( 1 )
+script = ExtResource( 3 )
+
+[node name="BuyZ" type="TextureButton" parent="ColorRect/GridContainer"]
+margin_left = 16.0
+margin_top = 16.0
+margin_right = 24.0
+margin_bottom = 24.0
+texture_normal = ExtResource( 1 )
+script = ExtResource( 3 )
+
+[node name="BuyT" type="TextureButton" parent="ColorRect/GridContainer"]
+margin_left = 32.0
+margin_top = 16.0
+margin_right = 40.0
+margin_bottom = 24.0
+texture_normal = ExtResource( 1 )
+script = ExtResource( 3 )
+[connection signal="buyButton" from="ColorRect/GridContainer/BuyI" to="." method="_on_ShopButton_pressed"]
+[connection signal="pressed" from="ColorRect/GridContainer/BuyI" to="ColorRect/GridContainer/BuyI" method="_on_Buy_pressed"]
+[connection signal="buyButton" from="ColorRect/GridContainer/BuyJ" to="." method="_on_ShopButton_pressed"]
+[connection signal="pressed" from="ColorRect/GridContainer/BuyJ" to="ColorRect/GridContainer/BuyJ" method="_on_Buy_pressed"]
+[connection signal="buyButton" from="ColorRect/GridContainer/BuyL" to="." method="_on_ShopButton_pressed"]
+[connection signal="pressed" from="ColorRect/GridContainer/BuyL" to="ColorRect/GridContainer/BuyL" method="_on_Buy_pressed"]
+[connection signal="buyButton" from="ColorRect/GridContainer/BuyO" to="." method="_on_ShopButton_pressed"]
+[connection signal="pressed" from="ColorRect/GridContainer/BuyO" to="ColorRect/GridContainer/BuyO" method="_on_Buy_pressed"]
+[connection signal="buyButton" from="ColorRect/GridContainer/BuyS" to="." method="_on_ShopButton_pressed"]
+[connection signal="pressed" from="ColorRect/GridContainer/BuyS" to="ColorRect/GridContainer/BuyS" method="_on_Buy_pressed"]
+[connection signal="buyButton" from="ColorRect/GridContainer/BuyZ" to="." method="_on_ShopButton_pressed"]
+[connection signal="pressed" from="ColorRect/GridContainer/BuyZ" to="ColorRect/GridContainer/BuyZ" method="_on_Buy_pressed"]
+[connection signal="buyButton" from="ColorRect/GridContainer/BuyT" to="." method="_on_ShopButton_pressed"]
+[connection signal="pressed" from="ColorRect/GridContainer/BuyT" to="ColorRect/GridContainer/BuyT" method="_on_Buy_pressed"]

@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Scenes/TetBlocks/TetI.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/TetBlocks/Block_30x1.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/TetBlocks/TetS.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/TetBlocks/TetZ.tscn" type="PackedScene" id=4]
 
 [node name="Node2D" type="Node2D"]
 
@@ -12,7 +13,7 @@
 position = Vector2( 48, 96 )
 
 [node name="TetI3" parent="Blocks" instance=ExtResource( 1 )]
-position = Vector2( 72, 72 )
+position = Vector2( 88, 56 )
 rotation = 1.5708
 
 [node name="TetI4" parent="Blocks" instance=ExtResource( 1 )]
@@ -25,10 +26,9 @@ position = Vector2( 96, 96 )
 [node name="TetS" parent="Blocks" instance=ExtResource( 3 )]
 position = Vector2( 40, 80 )
 
-[node name="TetS2" parent="Blocks" instance=ExtResource( 3 )]
-position = Vector2( 112, 80 )
-scale = Vector2( -1, 1 )
-
 [node name="Block_30x1" parent="Blocks" instance=ExtResource( 2 )]
 position = Vector2( 8, 128 )
 isStatic = true
+
+[node name="TetZ" parent="Blocks" instance=ExtResource( 4 )]
+position = Vector2( 88, 80 )

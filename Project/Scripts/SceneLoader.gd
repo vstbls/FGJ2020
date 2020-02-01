@@ -7,9 +7,8 @@ func change_scene(scene):
 	var loaded_scene = load("res://Scenes/" + scene + ".tscn")
 	var instanced_scene = loaded_scene.instance()
 	
-	if has_node("Level"):
-		var prev_scene = get_node("Level")
-		remove_child(prev_scene)
-		prev_scene.call_deferred("free")
-		
-	add_child(instanced_scene)
+	if $CanvasLayer.get_child_count() != 0:
+		#var prev_scene = get_node("Level")
+		for child in $CanvasLayer.get_children():
+			child.call_deferred("free")
+	$CanvasLayer.add_child(instanced_scene)

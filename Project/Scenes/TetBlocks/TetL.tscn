@@ -4,7 +4,9 @@
 [ext_resource path="res://Block.gd" type="Script" id=2]
 [ext_resource path="res://PhysMat.tres" type="PhysicsMaterial" id=3]
 
-[node name="TetL" type="Node2D"]
+[node name="TetL" type="Node2D" groups=[
+"Blocks",
+]]
 script = ExtResource( 2 )
 
 [node name="RigidBody2D" type="RigidBody2D" parent="."]

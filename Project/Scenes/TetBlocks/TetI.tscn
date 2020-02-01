@@ -7,7 +7,10 @@
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 4, 16 )
 
-[node name="TetI" type="Node2D"]
+[node name="TetI" type="Node2D" groups=[
+"Blocks",
+]]
+z_index = 2
 script = ExtResource( 2 )
 
 [node name="RigidBody2D" type="RigidBody2D" parent="."]
