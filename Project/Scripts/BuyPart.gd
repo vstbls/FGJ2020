@@ -22,7 +22,6 @@ func _ready():
 	pass # Replace with function body.
 
 func _on_ShopButton_pressed(btnName):
-	print(btnName)
 	var inst
 	match btnName:
 		"BuyI":
@@ -45,5 +44,6 @@ func _on_ShopButton_pressed(btnName):
 	inst.isDraggable = true
 	inst.get_node("RigidBody2D").set_pickable(true)
 	inst.modulate = Color(1,0,0)
-	inst.firstBuy = true
+	inst.can_drag = true
+	#Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 	pass # Replace with function body.

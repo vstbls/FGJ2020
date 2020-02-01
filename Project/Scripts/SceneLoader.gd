@@ -1,9 +1,12 @@
 extends Node2D
 
+var currentScene
+
 func _ready():
 	pass
 
 func change_scene(scene):
+	currentScene = scene
 	var loaded_scene = load("res://Scenes/" + scene + ".tscn")
 	var instanced_scene = loaded_scene.instance()
 	
