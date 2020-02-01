@@ -1,13 +1,19 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=10 format=2]
 
-[ext_resource path="res://Sprites/block_grayscale.png" type="Texture" id=1]
+[ext_resource path="res://Sprites/TetrominoButtons/tetromino_button_s.png" type="Texture" id=1]
 [ext_resource path="res://Scripts/BuyPart.gd" type="Script" id=2]
 [ext_resource path="res://Scripts/BuyPartButton.gd" type="Script" id=3]
+[ext_resource path="res://Sprites/TetrominoButtons/tetromino_button_i.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/TetrominoButtons/tetromino_button_j.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/TetrominoButtons/tetromino_button_l.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/TetrominoButtons/tetromino_button_o.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/TetrominoButtons/tetromino_button_z.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/TetrominoButtons/tetromino_button_t.png" type="Texture" id=9]
 
 [node name="PartShop" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 185.0
+margin_left = 186.0
 margin_bottom = -104.0
 script = ExtResource( 2 )
 __meta__ = {
@@ -41,28 +47,28 @@ __meta__ = {
 [node name="BuyI" type="TextureButton" parent="ColorRect/GridContainer"]
 margin_right = 8.0
 margin_bottom = 8.0
-texture_normal = ExtResource( 1 )
+texture_normal = ExtResource( 4 )
 script = ExtResource( 3 )
 
 [node name="BuyJ" type="TextureButton" parent="ColorRect/GridContainer"]
 margin_left = 16.0
 margin_right = 24.0
 margin_bottom = 8.0
-texture_normal = ExtResource( 1 )
+texture_normal = ExtResource( 5 )
 script = ExtResource( 3 )
 
 [node name="BuyL" type="TextureButton" parent="ColorRect/GridContainer"]
 margin_left = 32.0
 margin_right = 40.0
 margin_bottom = 8.0
-texture_normal = ExtResource( 1 )
+texture_normal = ExtResource( 6 )
 script = ExtResource( 3 )
 
 [node name="BuyO" type="TextureButton" parent="ColorRect/GridContainer"]
 margin_left = 48.0
 margin_right = 56.0
 margin_bottom = 8.0
-texture_normal = ExtResource( 1 )
+texture_normal = ExtResource( 7 )
 script = ExtResource( 3 )
 
 [node name="BuyS" type="TextureButton" parent="ColorRect/GridContainer"]
@@ -77,7 +83,7 @@ margin_left = 16.0
 margin_top = 16.0
 margin_right = 24.0
 margin_bottom = 24.0
-texture_normal = ExtResource( 1 )
+texture_normal = ExtResource( 8 )
 script = ExtResource( 3 )
 
 [node name="BuyT" type="TextureButton" parent="ColorRect/GridContainer"]
@@ -85,7 +91,7 @@ margin_left = 32.0
 margin_top = 16.0
 margin_right = 40.0
 margin_bottom = 24.0
-texture_normal = ExtResource( 1 )
+texture_normal = ExtResource( 9 )
 script = ExtResource( 3 )
 [connection signal="buyButton" from="ColorRect/GridContainer/BuyI" to="." method="_on_ShopButton_pressed"]
 [connection signal="pressed" from="ColorRect/GridContainer/BuyI" to="ColorRect/GridContainer/BuyI" method="_on_Buy_pressed"]
