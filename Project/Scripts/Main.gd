@@ -24,3 +24,10 @@ func _on_LevelMap_level_select(selectedlevel):
 	$LevelMap.hide()
 	$CanvasLayer/PartShop.show()
 	$CanvasLayer/SimulationButton.show()
+
+func _on_Menu_open_options():
+	Globals.save_game()
+
+
+func _on_Menu_quit_game():
+	Globals.load_game()
