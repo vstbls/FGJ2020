@@ -21,6 +21,7 @@ func _on_start_game():
 
 func _on_LevelMap_level_select(selectedlevel):
 	$SceneLoader.change_scene(selectedlevel)
+	yield($SceneLoader, "scene_changed")
 	$LevelMap.hide()
 	$CanvasLayer/PartShop.show()
 	$CanvasLayer/SimulationButton.show()
