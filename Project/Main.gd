@@ -6,6 +6,6 @@ func _ready():
 
 
 func _on_start_game():
-	$SceneLoader.change_scene("TestScene")
+	$SceneLoader.change_scene("Level1")
 	$CanvasLayer/Menu.hide()
 	pass # Replace with function body.
