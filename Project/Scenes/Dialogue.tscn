@@ -71,4 +71,12 @@ texture_pressed = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Label" type="Label" parent="Panel/TextureButton"]
+margin_right = 70.0
+margin_bottom = 14.0
+custom_fonts/font = ExtResource( 1 )
+text = "Close"
+align = 1
+valign = 1
 [connection signal="pressed" from="Panel/TextureButton" to="." method="_on_button_pressed"]
