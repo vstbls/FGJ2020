@@ -27,3 +27,4 @@ layer = 2
 [node name="LevelMap" parent="." instance=ExtResource( 6 )]
 visible = false
 [connection signal="start_game" from="CanvasLayer/Menu" to="." method="_on_start_game"]
+[connection signal="level_select" from="LevelMap" to="." method="_on_LevelMap_level_select"]

@@ -9,5 +9,6 @@ func _on_button_down():
 
 func _on_button_up():
 	$TextureButton/Label.margin_top = 2
-	emit_signal("level_picked", level)
 
+func _on_pressed():
+	emit_signal("level_picked", level)
