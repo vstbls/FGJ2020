@@ -2,7 +2,6 @@ extends Node2D
 
 export var isStatic = false
 export var isDraggable = false
-export var needsOffset = false
 var can_drag = false
 
 func _ready():
@@ -28,10 +27,11 @@ func _on_RigidBody2D_input_event(viewport, event, shape_idx):
 func _process(delta):
 	if Input.is_mouse_button_pressed(BUTTON_LEFT) and can_drag:
 		var curPos = get_global_mouse_position()
+		var rigidPos = $RigidBody2D.position
 		var x = fmod(curPos.x, 8)
 		var y = fmod(curPos.y, 8)
 		
 		curPos.x -= x
 		curPos.y -= y
 			
-		position = curPos
+		position = curPos + (rigidPos-position)
