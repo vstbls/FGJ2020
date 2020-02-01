@@ -22,6 +22,7 @@ color = Color( 0, 0, 0, 0.313726 )
 anchor_right = 1.0
 anchor_bottom = 1.0
 __meta__ = {
+"_edit_group_": true,
 "_edit_use_anchors_": false
 }
 
@@ -35,13 +36,13 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="TextureButton" type="TextureButton" parent="CenterContainer/VBoxContainer"]
+[node name="ResumeButton" type="TextureButton" parent="CenterContainer/VBoxContainer"]
 margin_right = 70.0
 margin_bottom = 14.0
 texture_normal = ExtResource( 2 )
 texture_pressed = ExtResource( 1 )
 
-[node name="Label" type="Label" parent="CenterContainer/VBoxContainer/TextureButton"]
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer/ResumeButton"]
 margin_right = 70.0
 margin_bottom = 14.0
 custom_fonts/font = ExtResource( 3 )
@@ -52,14 +53,14 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="TextureButton2" type="TextureButton" parent="CenterContainer/VBoxContainer"]
+[node name="MenuButton" type="TextureButton" parent="CenterContainer/VBoxContainer"]
 margin_top = 18.0
 margin_right = 70.0
 margin_bottom = 32.0
 texture_normal = ExtResource( 2 )
 texture_pressed = ExtResource( 1 )
 
-[node name="Label" type="Label" parent="CenterContainer/VBoxContainer/TextureButton2"]
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer/MenuButton"]
 margin_right = 70.0
 margin_bottom = 14.0
 custom_fonts/font = ExtResource( 3 )
@@ -70,14 +71,14 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="TextureButton3" type="TextureButton" parent="CenterContainer/VBoxContainer"]
+[node name="QuitButton" type="TextureButton" parent="CenterContainer/VBoxContainer"]
 margin_top = 36.0
 margin_right = 70.0
 margin_bottom = 50.0
 texture_normal = ExtResource( 2 )
 texture_pressed = ExtResource( 1 )
 
-[node name="Label" type="Label" parent="CenterContainer/VBoxContainer/TextureButton3"]
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer/QuitButton"]
 margin_right = 70.0
 margin_bottom = 14.0
 custom_fonts/font = ExtResource( 3 )
@@ -87,3 +88,6 @@ valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
+[connection signal="pressed" from="CenterContainer/VBoxContainer/ResumeButton" to="." method="_on_ResumeButton_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/MenuButton" to="." method="_on_MenuButton_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/QuitButton" to="." method="_on_QuitButton_pressed"]
