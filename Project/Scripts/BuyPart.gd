@@ -28,23 +28,49 @@ func _on_ShopButton_pressed(btnName):
 			var inst = blockI.instance()
 			canvas.add_child(inst)
 			inst.position = get_global_mouse_position()
-			print(inst.get_path())
+			inst.isDraggable = true
+			inst.get_node("RigidBody2D").set_pickable(true)
+			inst.modulate = Color(1,0,0)
 		"BuyJ":
 			var inst = blockJ.instance()
 			canvas.add_child(inst)
+			inst.position = get_global_mouse_position()
+			inst.isDraggable = true
+			inst.get_node("RigidBody2D").set_pickable(true)
+			inst.modulate = Color(1,0,0)
 		"BuyL":
 			var inst = blockL.instance()
 			canvas.add_child(inst)
+			inst.position = get_global_mouse_position()
+			inst.isDraggable = true
+			inst.get_node("RigidBody2D").set_pickable(true)
+			inst.modulate = Color(1,0,0)
 		"BuyO":
 			var inst = blockO.instance()
 			canvas.add_child(inst)
+			inst.position = get_global_mouse_position()
+			inst.isDraggable = true
+			inst.get_node("RigidBody2D").set_pickable(true)
+			inst.modulate = Color(1,0,0)
 		"BuyS":
 			var inst = blockS.instance()
 			canvas.add_child(inst)
+			inst.position = get_global_mouse_position()
+			inst.isDraggable = true
+			inst.get_node("RigidBody2D").set_pickable(true)
+			inst.modulate = Color(1,0,0)
 		"BuyZ":
 			var inst = blockZ.instance()
 			canvas.add_child(inst)
+			inst.position = get_global_mouse_position()
+			inst.isDraggable = true
+			inst.get_node("RigidBody2D").set_pickable(true)
+			inst.modulate = Color(1,0,0)
 		"BuyT":
 			var inst = blockT.instance()
 			canvas.add_child(inst)
+			inst.position = get_global_mouse_position()
+			inst.isDraggable = true
+			inst.get_node("RigidBody2D").set_pickable(true)
+			inst.modulate = Color(1,0,0)
 	pass # Replace with function body.

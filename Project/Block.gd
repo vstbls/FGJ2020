@@ -2,6 +2,7 @@ extends Node2D
 
 export var isStatic = false
 export var isDraggable = false
+export var needsOffset = false
 var can_drag = false
 
 func _ready():
@@ -29,14 +30,8 @@ func _process(delta):
 		var curPos = get_global_mouse_position()
 		var x = fmod(curPos.x, 8)
 		var y = fmod(curPos.y, 8)
-		if x < 4:
-			curPos.x -= x
-		else:
-			curPos.x += (8-x)
 		
-		if y < 4:
-			curPos.y -= y
-		else:
-			curPos.y += (8-y)
+		curPos.x -= x
+		curPos.y -= y
 			
 		position = curPos
