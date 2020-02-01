@@ -23,54 +23,27 @@ func _ready():
 
 func _on_ShopButton_pressed(btnName):
 	print(btnName)
+	var inst
 	match btnName:
 		"BuyI":
-			var inst = blockI.instance()
-			canvas.add_child(inst)
-			inst.position = get_global_mouse_position()
-			inst.isDraggable = true
-			inst.get_node("RigidBody2D").set_pickable(true)
-			inst.modulate = Color(1,0,0)
+			inst = blockI.instance()
 		"BuyJ":
-			var inst = blockJ.instance()
-			canvas.add_child(inst)
-			inst.position = get_global_mouse_position()
-			inst.isDraggable = true
-			inst.get_node("RigidBody2D").set_pickable(true)
-			inst.modulate = Color(1,0,0)
+			inst = blockJ.instance()
 		"BuyL":
-			var inst = blockL.instance()
-			canvas.add_child(inst)
-			inst.position = get_global_mouse_position()
-			inst.isDraggable = true
-			inst.get_node("RigidBody2D").set_pickable(true)
-			inst.modulate = Color(1,0,0)
+			inst = blockL.instance()
 		"BuyO":
-			var inst = blockO.instance()
-			canvas.add_child(inst)
-			inst.position = get_global_mouse_position()
-			inst.isDraggable = true
-			inst.get_node("RigidBody2D").set_pickable(true)
-			inst.modulate = Color(1,0,0)
+			inst = blockO.instance()
 		"BuyS":
-			var inst = blockS.instance()
-			canvas.add_child(inst)
-			inst.position = get_global_mouse_position()
-			inst.isDraggable = true
-			inst.get_node("RigidBody2D").set_pickable(true)
-			inst.modulate = Color(1,0,0)
+			inst = blockS.instance()
 		"BuyZ":
-			var inst = blockZ.instance()
-			canvas.add_child(inst)
-			inst.position = get_global_mouse_position()
-			inst.isDraggable = true
-			inst.get_node("RigidBody2D").set_pickable(true)
-			inst.modulate = Color(1,0,0)
+			inst = blockZ.instance()
 		"BuyT":
-			var inst = blockT.instance()
-			canvas.add_child(inst)
-			inst.position = get_global_mouse_position()
-			inst.isDraggable = true
-			inst.get_node("RigidBody2D").set_pickable(true)
-			inst.modulate = Color(1,0,0)
+			inst = blockT.instance()
+			
+	canvas.add_child(inst)
+	inst.position = get_global_mouse_position()
+	inst.isDraggable = true
+	inst.get_node("RigidBody2D").set_pickable(true)
+	inst.modulate = Color(1,0,0)
+	inst.firstBuy = true
 	pass # Replace with function body.
