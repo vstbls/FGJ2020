@@ -33,7 +33,7 @@ func _process(delta):
 			firstBuy = false
 	elif (Input.is_mouse_button_pressed(BUTTON_LEFT) and can_drag) or firstBuy:
 		var curPos = get_global_mouse_position()
-			
+		
 		print(str(offset) + " : " + str(position))
 		position = curPos-offset		
 		var x = fmod(position.x, 8)
@@ -43,3 +43,10 @@ func _process(delta):
 		else:
 			position.x += (8-x)
 		position.y -= y
+		
+
+func _input(event):
+	if event is InputEventMouseButton:
+		if event.button_index == BUTTON_RIGHT and (can_drag or firstBuy):
+			rotation_degrees += 90
+			rotation_degrees = clamp(rotation_degrees, 0, 360)
