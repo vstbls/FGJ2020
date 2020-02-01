@@ -13,16 +13,17 @@ func _ready():
 func _on_start_game():
 	#$SceneLoader.change_scene("Level1")
 	$CanvasLayer/Menu.hide()
-	$CanvasLayer/PartShop.show()
+	$CanvasLayer/PartShop.hide()
 	$LevelMap.show()
-	$CanvasLayer/SimulationButton.show()
+	$CanvasLayer/SimulationButton.hide()
 	pass # Replace with function body.
 
 
 func _on_LevelMap_level_select(selectedlevel):
 	$SceneLoader.change_scene(selectedlevel)
 	$LevelMap.hide()
-
+	$CanvasLayer/PartShop.show()
+	$CanvasLayer/SimulationButton.show()
 
 func _on_Menu_open_options():
 	Globals.save_game()
