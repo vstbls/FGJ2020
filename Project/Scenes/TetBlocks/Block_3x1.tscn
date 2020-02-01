@@ -13,6 +13,7 @@ extents = Vector2( 12, 4 )
 script = ExtResource( 2 )
 
 [node name="RigidBody2D" type="RigidBody2D" parent="."]
+position = Vector2( 12, 4 )
 mode = 1
 physics_material_override = ExtResource( 3 )
 __meta__ = {

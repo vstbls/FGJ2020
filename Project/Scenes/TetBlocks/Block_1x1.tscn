@@ -13,8 +13,12 @@ extents = Vector2( 4, 4 )
 script = ExtResource( 2 )
 
 [node name="RigidBody2D" type="RigidBody2D" parent="."]
+position = Vector2( 4, 4 )
 mode = 1
 physics_material_override = ExtResource( 3 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="Sprite" type="Sprite" parent="RigidBody2D"]
 texture = ExtResource( 1 )

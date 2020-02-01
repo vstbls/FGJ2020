@@ -22,13 +22,13 @@ rotation = 1.5708
 [node name="TetI2" parent="Blocks" instance=ExtResource( 1 )]
 position = Vector2( 96, 96 )
 
-[node name="Block_30x1" parent="Blocks" instance=ExtResource( 2 )]
-position = Vector2( 128, 128 )
-isStatic = true
-
 [node name="TetS" parent="Blocks" instance=ExtResource( 3 )]
 position = Vector2( 40, 80 )
 
 [node name="TetS2" parent="Blocks" instance=ExtResource( 3 )]
 position = Vector2( 112, 80 )
 scale = Vector2( -1, 1 )
+
+[node name="Block_30x1" parent="Blocks" instance=ExtResource( 2 )]
+position = Vector2( 8, 128 )
+isStatic = true
