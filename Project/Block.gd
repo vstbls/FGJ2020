@@ -28,8 +28,7 @@ func _on_RigidBody2D_input_event(viewport, event, shape_idx):
 		if Input.is_mouse_button_pressed(BUTTON_LEFT) and !can_drag and !preventDouble:
 			can_drag = true
 			timer = 0
-			print("3")
-			#Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
+			Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 
 func _process(delta):
 	if can_drag:
@@ -54,7 +53,5 @@ func _input(event):
 			if(rotation_degrees == 360):
 				rotation_degrees = 0
 		elif Input.is_mouse_button_pressed(BUTTON_LEFT) and can_drag:
-			print("1")
 			can_drag = false
 			preventDouble = true
-			#Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
