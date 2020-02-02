@@ -1,12 +1,17 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Sprites/tom.png" type="Texture" id=1]
+[ext_resource path="res://Scripts/Block.gd" type="Script" id=2]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 4.0
 height = 4.0
 
-[node name="NPC" type="Node2D"]
+[node name="NPC" type="Node2D" groups=[
+"Blocks",
+]]
+script = ExtResource( 2 )
+isStatic = true
 
 [node name="RigidBody2D" type="RigidBody2D" parent="."]
 position = Vector2( 4, 6 )

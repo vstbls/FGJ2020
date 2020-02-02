@@ -15,9 +15,7 @@ func _ready():
 func _on_start_game():
 	#$SceneLoader.change_scene("Level1")
 	$CanvasLayer/Menu.hide()
-	$CanvasLayer/PartShop.hide()
 	$LevelMap.show()
-	$ButtonLayer/SimulationButton.hide()
 	pass # Replace with function body.
 
 
