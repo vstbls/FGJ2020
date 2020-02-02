@@ -20,3 +20,11 @@ func change_scene(scene):
 			child.call_deferred("free")
 	$CanvasLayer.add_child(instanced_scene)
 	emit_signal("scene_changed")
+
+func unload_current_scene():
+	get_node("/root/Root/TransitionLayer/Transition").transition()
+	yield(get_node("/root/Root/TransitionLayer/Transition"), "change_the_scene_right_now")
+	if $CanvasLayer.get_child_count() != 0:
+		for child in $CanvasLayer.get_children():
+			child.call_deferred("free")
+	emit_signal("scene_changed")
