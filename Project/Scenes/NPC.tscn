@@ -22,8 +22,8 @@ animations = [ {
 } ]
 
 [sub_resource type="CapsuleShape2D" id=2]
-radius = 4.0
-height = 4.0
+radius = 3.0
+height = 6.0
 
 [node name="NPC" type="Node2D" groups=[
 "Blocks",
@@ -32,16 +32,15 @@ script = ExtResource( 2 )
 
 [node name="RigidBody2D" type="RigidBody2D" parent="."]
 position = Vector2( 4, 6 )
-__meta__ = {
-"_edit_group_": true
-}
 
 [node name="Sprite" type="AnimatedSprite" parent="RigidBody2D"]
 frames = SubResource( 1 )
 animation = "idle"
+frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+position = Vector2( 0, 1 )
 shape = SubResource( 2 )
 
 [node name="BloodEmitter" parent="RigidBody2D" instance=ExtResource( 7 )]

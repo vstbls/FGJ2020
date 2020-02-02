@@ -21,7 +21,6 @@ func _on_Timer_timeout():
 			stars = 1
 		$Timer.wait_time = 3
 		$Timer.start()
-		$Countdown.start()
 		firstStage = false
 	else:
 		blockCount = get_node("/root/Root/SceneLoader/CanvasLayer").get_child_count() - 1
