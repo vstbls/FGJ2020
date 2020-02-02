@@ -37,7 +37,7 @@ func _on_Menu_open_options():
 
 
 func _on_Menu_quit_game():
-	Globals.load_game()
+	Globals.quit_game()
 
 func _on_PauseButton_pressed():
 	var pauseMenu = load("res://Scenes/PauseMenu.tscn")
