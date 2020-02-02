@@ -17,14 +17,14 @@ func _on_Timer_timeout():
 	var curPos = $NPC/RigidBody2D.position
 	var blockCount
 	if firstStage:
-		if abs(curPos.x-tomPos.x)<0.5 and abs(curPos.y-tomPos.y)<0.5:
+		if abs(curPos.x-tomPos.x)<1 and abs(curPos.y-tomPos.y)<1:
 			stars = 1
-		$Timer.wait_time = 3
+		$Timer.wait_time = 3.1
 		$Timer.start()
 		firstStage = false
 	else:
 		blockCount = get_node("/root/Root/SceneLoader/CanvasLayer").get_child_count() - 1
-		if abs(curPos.x-tomPos.x)<0.5 and abs(curPos.y-tomPos.y)<0.5:
+		if abs(curPos.x-tomPos.x)<1 and abs(curPos.y-tomPos.y)<1:
 			stars = 2
 			if blockCount == 1:
 				stars = 3

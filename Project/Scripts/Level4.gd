@@ -26,7 +26,7 @@ func _on_Timer_timeout():
 		blockCount = get_node("/root/Root/SceneLoader/CanvasLayer").get_child_count() - 1
 		if curPos.y<48:
 			stars = 2
-			if blockCount < 4:
+			if blockCount < 6:
 				stars = 3
 		$Countdown.stop()
 		var levelComplete = load("res://Scenes/LevelComplete.tscn")
@@ -34,7 +34,7 @@ func _on_Timer_timeout():
 		complete_instance.set_text("Blocks used: " + str(blockCount))
 		complete_instance.set_victory(stars)
 		get_node("/root/Root/TransitionLayer").add_child(complete_instance)
-		if Globals.levelstats["Level2"].stars < stars: Globals.levelstats["Level2"].stars = stars
+		if Globals.levelstats["Level4"].stars < stars: Globals.levelstats["Level4"].stars = stars
 
 func _on_Countdown_timeout():
 	timeLeftCurrent -= 1

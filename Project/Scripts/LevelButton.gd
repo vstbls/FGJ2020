@@ -24,5 +24,4 @@ func _on_pressed():
 func update_stars():
 	if level == "": return
 	var count = Globals.levelstats[level].stars
-	print(str(Globals.levelstats[level].stars))
 	$Stars.update_stars(count)
