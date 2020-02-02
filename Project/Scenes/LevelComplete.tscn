@@ -1,10 +1,19 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=9 format=2]
 
+[ext_resource path="res://Sprites/star_big.png" type="Texture" id=1]
 [ext_resource path="res://Sprites/9patch_white.png" type="Texture" id=2]
 [ext_resource path="res://Scripts/Dialogue.gd" type="Script" id=3]
 [ext_resource path="res://Sprites/button_unpressed.png" type="Texture" id=4]
 [ext_resource path="res://Sprites/button_pressed.png" type="Texture" id=5]
 [ext_resource path="res://Fonts/PixelFont2.tres" type="DynamicFont" id=6]
+[ext_resource path="res://Sprites/nostar_big.png" type="Texture" id=7]
+
+[sub_resource type="AnimatedTexture" id=1]
+frames = 2
+fps = 0.0
+frame_0/texture = ExtResource( 7 )
+frame_1/texture = ExtResource( 1 )
+frame_1/delay_sec = 0.0
 
 [node name="LevelComplete" type="Control"]
 anchor_right = 1.0
@@ -14,7 +23,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Panel" type="NinePatchRect" parent="."]
+[node name="Bg" type="NinePatchRect" parent="."]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -32,7 +41,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="TextureButton" type="TextureButton" parent="Panel"]
+[node name="TextureButton" type="TextureButton" parent="Bg"]
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
@@ -47,7 +56,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label" type="Label" parent="Panel/TextureButton"]
+[node name="Label" type="Label" parent="Bg/TextureButton"]
 margin_right = 70.0
 margin_bottom = 13.0
 custom_fonts/font = ExtResource( 6 )
@@ -60,7 +69,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Complete" type="Label" parent="Panel"]
+[node name="Complete" type="Label" parent="Bg"]
 anchor_left = 0.5
 anchor_right = 0.5
 margin_left = -42.5
@@ -75,7 +84,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label" type="Label" parent="Panel"]
+[node name="Label" type="Label" parent="Bg"]
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
@@ -92,4 +101,37 @@ valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
-[connection signal="pressed" from="Panel/TextureButton" to="." method="_on_button_pressed"]
+
+[node name="Stars" type="HBoxContainer" parent="Bg"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -50.0
+margin_top = -22.0
+margin_right = 40.0
+margin_bottom = 16.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Star1" type="TextureRect" parent="Bg/Stars"]
+margin_right = 32.0
+margin_bottom = 38.0
+texture = SubResource( 1 )
+stretch_mode = 3
+
+[node name="Star2" type="TextureRect" parent="Bg/Stars"]
+margin_left = 36.0
+margin_right = 68.0
+margin_bottom = 38.0
+texture = SubResource( 1 )
+stretch_mode = 3
+
+[node name="Star3" type="TextureRect" parent="Bg/Stars"]
+margin_left = 72.0
+margin_right = 104.0
+margin_bottom = 38.0
+texture = SubResource( 1 )
+stretch_mode = 3
+[connection signal="pressed" from="Bg/TextureButton" to="." method="_on_button_pressed"]

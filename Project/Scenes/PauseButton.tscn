@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://Sprites/play_button_unpressed.png" type="Texture" id=1]
+[ext_resource path="res://Sprites/pause_pressed.png" type="Texture" id=1]
 [ext_resource path="res://Scripts/PauseButton.gd" type="Script" id=2]
+[ext_resource path="res://Sprites/pause_unpressed.png" type="Texture" id=3]
 
 [node name="PauseButton" type="Control"]
 anchor_right = 1.0
@@ -14,7 +15,10 @@ __meta__ = {
 }
 
 [node name="PauseBtn" type="TextureButton" parent="."]
-margin_right = 32.0
-margin_bottom = 32.0
-texture_normal = ExtResource( 1 )
+margin_left = 4.0
+margin_top = 4.0
+margin_right = 20.0
+margin_bottom = 20.0
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 1 )
 [connection signal="pressed" from="PauseBtn" to="." method="_on_PauseBtn_pressed"]
