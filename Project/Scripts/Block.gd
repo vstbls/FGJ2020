@@ -12,7 +12,7 @@ func _ready():
 	for node in $RigidBody2D.get_children():
 		if(node.is_class("Sprite")):
 			mass += 1
-	$RigidBody2D.mass = mass
+	$RigidBody2D.mass = clamp(mass, 1, 100)
 	set_process(true)
 	pass
 
