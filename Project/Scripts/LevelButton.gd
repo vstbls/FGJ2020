@@ -19,6 +19,7 @@ func _on_pressed():
 	emit_signal("level_picked", level)
 	yield(get_node("/root/Root/TransitionLayer/Transition"), "change_the_scene_right_now")
 	yield(get_node("/root/Root/TransitionLayer/Transition/AnimationPlayer"), "animation_finished")
+	if level == "": return
 	Globals.show_dialogue(Globals.levelmsgs[level])
 	
 func update_stars():
