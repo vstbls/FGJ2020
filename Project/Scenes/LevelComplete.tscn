@@ -38,9 +38,9 @@ anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 margin_left = -35.0
-margin_top = -17.0
+margin_top = -18.0
 margin_right = 35.0
-margin_bottom = 25.0
+margin_bottom = 24.0
 texture_normal = ExtResource( 4 )
 texture_pressed = ExtResource( 5 )
 __meta__ = {
@@ -54,6 +54,39 @@ custom_fonts/font = ExtResource( 6 )
 custom_colors/font_color_shadow = Color( 0.133333, 0.12549, 0.203922, 0.639216 )
 custom_constants/shadow_offset_x = 0
 text = "Cool!"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Complete" type="Label" parent="Panel"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -42.5
+margin_top = 10.0
+margin_right = 42.5
+margin_bottom = 14.0
+custom_fonts/font = ExtResource( 6 )
+custom_colors/font_color = Color( 0.133333, 0.12549, 0.203922, 1 )
+text = "LEVEL COMPLETE!"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Panel"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -46.5
+margin_top = -33.0
+margin_right = 46.5
+margin_bottom = -19.0
+custom_fonts/font = ExtResource( 6 )
+custom_colors/font_color = Color( 0.192157, 0.184314, 0.258824, 1 )
+text = "Blocks used: n"
 align = 1
 valign = 1
 __meta__ = {
