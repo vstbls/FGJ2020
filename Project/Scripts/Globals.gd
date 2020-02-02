@@ -2,7 +2,7 @@ extends Node
 
 var levelstats = {
 	"Level1": {"stars": 0, "message": "Tom: Please... just make the tower stop collapsing on me...\nStars:\n*: Keep Tom alive for 2s\n**: 5 seconds\n***: 5 seconds - using one block"},
-	"Level2": {"stars": 0},
+	"Level2": {"stars": 0, "message": "Tom: Please... This tower I climbed is about to collapse...\nStars:\n*: Keep Tom above line for 2s\n**: 5 seconds\n***: 5 s - using < 4 blocks"},
 	"Level3": {"stars": 0}
 }
 var levelmsgs = {

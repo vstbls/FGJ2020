@@ -8,7 +8,7 @@ func _ready():
 
 func change_scene(scene):
 	currentScene = scene
-	var loaded_scene = load("res://Scenes/" + scene + ".tscn")
+	var loaded_scene = load("res://Scenes/Levels/" + scene + ".tscn")
 	var instanced_scene = loaded_scene.instance()
 	get_node("/root/Root/TransitionLayer/Transition").transition()
 	yield(get_node("/root/Root/TransitionLayer/Transition"), "change_the_scene_right_now")

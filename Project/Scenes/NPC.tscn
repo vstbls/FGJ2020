@@ -25,6 +25,7 @@ animations = [ {
 radius = 4.0
 height = 4.0
 
+
 [node name="NPC" type="Node2D" groups=[
 "Blocks",
 ]]
