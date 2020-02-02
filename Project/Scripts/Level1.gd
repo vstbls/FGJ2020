@@ -29,3 +29,4 @@ func _on_Timer_timeout():
 		complete_instance.set_text("Blocks used: " + str(blockCount))
 		complete_instance.set_victory(stars)
 		get_node("/root/Root/TransitionLayer").add_child(complete_instance)
+		if Globals.levelstats["Level1"].stars < stars: Globals.levelstats["Level1"].stars = stars
