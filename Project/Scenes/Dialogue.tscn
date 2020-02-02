@@ -4,12 +4,8 @@
 [ext_resource path="res://Sprites/button_pressed.png" type="Texture" id=2]
 [ext_resource path="res://Sprites/button_unpressed.png" type="Texture" id=3]
 [ext_resource path="res://Scripts/Dialogue.gd" type="Script" id=4]
-
-[sub_resource type="StyleBoxFlat" id=1]
-bg_color = Color( 0.917647, 0.917647, 0.917647, 1 )
-
-[sub_resource type="StyleBoxFlat" id=2]
-bg_color = Color( 0.501961, 0.501961, 0.501961, 1 )
+[ext_resource path="res://Sprites/9patch_gray.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/9patch_white.png" type="Texture" id=6]
 
 [node name="Dialogue" type="Control"]
 anchor_right = 1.0
@@ -19,7 +15,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Panel" type="Panel" parent="."]
+[node name="Panel" type="NinePatchRect" parent="."]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -28,29 +24,40 @@ margin_left = -96.0
 margin_top = -48.0
 margin_right = 96.0
 margin_bottom = 48.0
-custom_styles/panel = SubResource( 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+texture = ExtResource( 6 )
+patch_margin_left = 3
+patch_margin_top = 3
+patch_margin_right = 3
+patch_margin_bottom = 4
 
-[node name="Panel" type="Panel" parent="Panel"]
+[node name="Panel" type="NinePatchRect" parent="Panel"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 8.0
 margin_top = 8.0
 margin_right = -8.0
-margin_bottom = -16.0
-custom_styles/panel = SubResource( 2 )
+margin_bottom = -18.0
+texture = ExtResource( 5 )
+patch_margin_left = 3
+patch_margin_top = 3
+patch_margin_right = 3
+patch_margin_bottom = 3
 
 [node name="Label" type="Label" parent="Panel/Panel"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+margin_left = 2.0
+margin_top = 2.0
+margin_right = -2.0
+margin_bottom = -2.0
 custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 0.133333, 0.12549, 0.203922, 1 )
+custom_constants/shadow_offset_x = 0
 text = "Tom: Please... just make the tower stop collapsing on me...
 Stars:
-1 - Keep Tom alive for 2s
-2 - 5 seconds
-3 - 5 seconds - using one block"
+* - Keep Tom alive for 2s
+** - 5 seconds
+*** - 5 seconds - using one block"
 autowrap = true
 clip_text = true
 __meta__ = {
@@ -63,9 +70,9 @@ anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 margin_left = -35.0
-margin_top = -15.0
+margin_top = -17.0
 margin_right = 35.0
-margin_bottom = 25.0001
+margin_bottom = 25.0
 texture_normal = ExtResource( 3 )
 texture_pressed = ExtResource( 2 )
 __meta__ = {
@@ -74,9 +81,12 @@ __meta__ = {
 
 [node name="Label" type="Label" parent="Panel/TextureButton"]
 margin_right = 70.0
-margin_bottom = 14.0
+margin_bottom = 13.0
 custom_fonts/font = ExtResource( 1 )
-text = "Close"
+text = "Okay!"
 align = 1
 valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="pressed" from="Panel/TextureButton" to="." method="_on_button_pressed"]
