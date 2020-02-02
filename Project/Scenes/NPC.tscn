@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Sprites/Tom/tom4.png" type="Texture" id=1]
-[ext_resource path="res://Scripts/Block.gd" type="Script" id=2]
+[ext_resource path="res://Scripts/NPC.gd" type="Script" id=2]
 [ext_resource path="res://Sprites/Tom/tom3.png" type="Texture" id=3]
 [ext_resource path="res://Sprites/Tom/tom2.png" type="Texture" id=4]
 [ext_resource path="res://Sprites/Tom/tomAAAAAA.png" type="Texture" id=5]
@@ -25,12 +25,10 @@ animations = [ {
 radius = 4.0
 height = 4.0
 
-
 [node name="NPC" type="Node2D" groups=[
 "Blocks",
 ]]
 script = ExtResource( 2 )
-isStatic = true
 
 [node name="RigidBody2D" type="RigidBody2D" parent="."]
 position = Vector2( 4, 6 )

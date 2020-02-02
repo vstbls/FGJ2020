@@ -274,11 +274,16 @@ __meta__ = {
 
 [node name="Label" type="Label" parent="MenuButton"]
 margin_right = 68.0
-margin_bottom = 14.0
+margin_bottom = 12.0
 custom_fonts/font = ExtResource( 6 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 0.529412 )
 text = "Menu"
 align = 1
 valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="level_picked" from="Buttons/LevelButton" to="." method="_on_LevelButton_level_picked"]
 [connection signal="level_picked" from="Buttons/LevelButton2" to="." method="_on_LevelButton_level_picked"]
 [connection signal="pressed" from="MenuButton" to="." method="_on_MenuButton_pressed"]
