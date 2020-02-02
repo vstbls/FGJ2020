@@ -132,6 +132,7 @@ margin_left = 48.0
 margin_top = 64.0
 margin_right = 61.0
 margin_bottom = 77.0
+level = "Level2"
 
 [node name="Label" parent="Buttons/LevelButton2/TextureButton" index="0"]
 text = "2"
@@ -245,6 +246,7 @@ text = "Menu"
 align = 1
 valign = 1
 [connection signal="level_picked" from="Buttons/LevelButton" to="." method="_on_LevelButton_level_picked"]
+[connection signal="level_picked" from="Buttons/LevelButton2" to="." method="_on_LevelButton_level_picked"]
 [connection signal="pressed" from="MenuButton" to="." method="_on_MenuButton_pressed"]
 
 [editable path="Buttons/LevelButton"]
