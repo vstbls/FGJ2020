@@ -1,7 +1,7 @@
 extends Node
 
 var levelstats = {
-	"Level1": {"stars": 0},
+	"Level1": {"stars": 0, "message": "Tom: Please... just make the tower stop collapsing on me...\nStars:\n*: Keep Tom alive for 2s\n**: 5 seconds\n***: 5 seconds - using one block"},
 	"Level2": {"stars": 0},
 	"Level3": {"stars": 0}
 }
