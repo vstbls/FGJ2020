@@ -20,6 +20,8 @@ func change_scene(scene):
 			child.call_deferred("free")
 	$CanvasLayer.add_child(instanced_scene)
 	emit_signal("scene_changed")
+	get_node("/root/Root/Music/MenuMusic").stop()
+	get_node("/root/Root/Music/LevelMusic").play()
 
 func unload_current_scene():
 	get_node("/root/Root/TransitionLayer/Transition").transition()
@@ -28,6 +30,8 @@ func unload_current_scene():
 		for child in $CanvasLayer.get_children():
 			child.call_deferred("free")
 	emit_signal("scene_changed")
+	get_node("/root/Root/Music/LevelMusic").stop()
+	get_node("/root/Root/Music/MenuMusic").play()
 
 func hide_buttons():
 	var buttonLayer = get_node("/root/Root/ButtonLayer")
