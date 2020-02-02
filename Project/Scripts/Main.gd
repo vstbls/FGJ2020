@@ -37,7 +37,7 @@ func _on_Menu_open_options():
 
 
 func _on_Menu_quit_game():
-	Globals.load_game()
+	Globals.quit_game()
 
 func _on_PauseButton_pressed():
 	var pauseMenu = load("res://Scenes/PauseMenu.tscn")
@@ -61,6 +61,7 @@ func _on_pauseMenu_open_MainMenu():
 	get_tree().paused = false
 	var pMenu = get_node("ButtonLayer/PauseMenu")
 	$SceneLoader.unload_current_scene()
+	yield(get_node("/root/Root/TransitionLayer/Transition"), "change_the_scene_right_now")
 	$LevelMap.show()
 	$CanvasLayer/PartShop.hide()
 	$ButtonLayer/PauseButton.hide()

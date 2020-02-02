@@ -29,3 +29,9 @@ func show_dialogue(text):
 	var dialogue_instance = dialogue.instance()
 	get_node("/root/Root/TransitionLayer").add_child(dialogue_instance)
 	get_node("/root/Root/TransitionLayer/Dialogue").set_text(text)
+	
+func quit_game():
+	get_node("/root/Root/TransitionLayer/Transition").transition()
+	yield(get_node("/root/Root/TransitionLayer/Transition"), "change_the_scene_right_now")
+	get_tree().quit()
+	pass
