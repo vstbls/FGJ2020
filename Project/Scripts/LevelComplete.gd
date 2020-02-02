@@ -31,4 +31,5 @@ func _on_button_pressed():
 	sceneLoader.hide_buttons()
 	yield(get_node("/root/Root/TransitionLayer/Transition/AnimationPlayer"), "animation_finished")
 	get_node("/root/Root/LevelMap").show()
+	Globals.save_game()
 	queue_free()

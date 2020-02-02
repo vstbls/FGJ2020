@@ -9,6 +9,7 @@ func _ready():
 	var window_size = OS.window_size
 	OS.window_position = screen_size*0.5 - window_size*0.5
 	$ButtonLayer/PauseButton.connect("pause_game", self, "_on_PauseButton_pressed")
+	Globals.load_game()
 	pass
 
 

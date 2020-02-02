@@ -5,6 +5,9 @@ var levelstats = {
 	"Level2": {"stars": 0},
 	"Level3": {"stars": 0}
 }
+var levelmsgs = {
+	"Level1": "Tom: Please... just make the tower stop collapsing on me...\nStars:\n*: Keep Tom alive for 2s\n**: 5 seconds\n***: 5 seconds - using one block"
+}
 var dialogue = preload("res://Scenes/Dialogue.tscn")
 
 func save_game():
