@@ -176,6 +176,7 @@ margin_left = 32.0
 margin_top = 48.0
 margin_right = 45.0
 margin_bottom = 61.0
+level = "Level3"
 
 [node name="Label" parent="Buttons/LevelButton3/TextureButton" index="0"]
 text = "3"
@@ -287,6 +288,7 @@ __meta__ = {
 }
 [connection signal="level_picked" from="Buttons/LevelButton" to="." method="_on_LevelButton_level_picked"]
 [connection signal="level_picked" from="Buttons/LevelButton2" to="." method="_on_LevelButton_level_picked"]
+[connection signal="level_picked" from="Buttons/LevelButton3" to="." method="_on_LevelButton_level_picked"]
 [connection signal="pressed" from="MenuButton" to="." method="_on_MenuButton_pressed"]
 
 [editable path="Buttons/LevelButton"]

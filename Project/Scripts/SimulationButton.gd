@@ -14,7 +14,7 @@ func _on_TextureButton_pressed():
 		var sceneLoader = get_node("/root/Root/SceneLoader")
 		sceneLoader.change_scene(sceneLoader.currentScene)
 		var timer = currentLevelNode.get_node("Timer")
-		var countDown = currentLevelNode.get_node("CountDown")
+		var countDown = currentLevelNode.get_node("Countdown")
 		timer.stop()
 		timer.wait_time = currentLevelNode.timeOut
 		countDown.stop()
