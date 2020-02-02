@@ -17,6 +17,9 @@ func _on_start_game():
 	#$SceneLoader.change_scene("Level1")
 	$CanvasLayer/Menu.hide()
 	$LevelMap.show()
+	var level_nodes = get_tree().get_nodes_in_group("Levels")
+	for level_node in level_nodes:
+		level_node.call("update_stars")
 	pass # Replace with function body.
 
 

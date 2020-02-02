@@ -6,7 +6,8 @@ var levelstats = {
 	"Level3": {"stars": 0}
 }
 var levelmsgs = {
-	"Level1": "Tom: Please... just make the tower stop collapsing on me...\nStars:\n*: Keep Tom alive for 2s\n**: 5 seconds\n***: 5 seconds - using one block"
+	"Level1": "Tom: Please... just make the tower stop collapsing on me...\nStars:\n*: Keep Tom alive for 2s\n**: 5 seconds\n***: 5 seconds - using one block",
+	"Level2": "Tom: Please... This tower I climbed is about to collapse...\nStars:\n*: Keep Tom above line for 2s\n**: 5 seconds\n***: 5 s - using < 4 blocks"
 }
 var dialogue = preload("res://Scenes/Dialogue.tscn")
 
