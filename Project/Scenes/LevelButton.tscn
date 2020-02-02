@@ -7,7 +7,9 @@
 [ext_resource path="res://Scripts/LevelButton.gd" type="Script" id=5]
 [ext_resource path="res://Scenes/Stars.tscn" type="PackedScene" id=6]
 
-[node name="LevelButton" type="Control"]
+[node name="LevelButton" type="Control" groups=[
+"Levels",
+]]
 margin_right = 16.0
 margin_bottom = 16.0
 script = ExtResource( 5 )

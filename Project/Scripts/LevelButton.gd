@@ -22,5 +22,6 @@ func _on_pressed():
 	Globals.show_dialogue(Globals.levelstats[level].message)
 	
 func update_stars():
+	if level == "": return
 	var count = Globals.levelstats[level].stars
 	$Stars.update_stars(count)
