@@ -12,7 +12,9 @@ func _on_TextureButton_pressed():
 	else:
 		var sceneLoader = get_node("/root/Root/SceneLoader")
 		sceneLoader.change_scene(sceneLoader.currentScene)
-		currentLevelNode.get_node("Timer").stop()
+		var timer = currentLevelNode.get_node("Timer")
+		timer.stop()
+		timer.wait_time = currentLevelNode.timeOut
 		isStart = true
 		
 	pass # Replace with function body.

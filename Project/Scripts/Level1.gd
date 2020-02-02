@@ -1,8 +1,13 @@
 extends Node2D
 
-func _ready():
-	pass
+var firstStage = true
+var timeOut = 3
 
 func _on_Timer_timeout():
-	print("Level ended.")
-	pass # Replace with function body.
+	if firstStage:
+		print("Survived 2 seconds?")
+		$Timer.wait_time = 3
+		$Timer.start()
+		firstStage = false
+	else:
+		print("5 seconds passed.")
