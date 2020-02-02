@@ -53,5 +53,5 @@ wait_time = 2.0
 one_shot = true
 
 [node name="NPC" parent="." instance=ExtResource( 7 )]
-position = Vector2( 64, 104 )
+position = Vector2( 76, 116 )
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

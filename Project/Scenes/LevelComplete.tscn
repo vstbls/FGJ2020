@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=2]
 
+[ext_resource path="res://Scripts/LevelComplete.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/9patch_white.png" type="Texture" id=2]
-[ext_resource path="res://Scripts/Dialogue.gd" type="Script" id=3]
 [ext_resource path="res://Sprites/button_unpressed.png" type="Texture" id=4]
 [ext_resource path="res://Sprites/button_pressed.png" type="Texture" id=5]
 [ext_resource path="res://Fonts/PixelFont2.tres" type="DynamicFont" id=6]
@@ -9,7 +9,7 @@
 [node name="LevelComplete" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-script = ExtResource( 3 )
+script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
