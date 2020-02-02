@@ -14,7 +14,8 @@ func _ready():
 
 
 func _on_start_game():
-	#$SceneLoader.change_scene("Level1")
+	$TransitionLayer/Transition.transition()
+	yield($TransitionLayer/Transition, "change_the_scene_right_now")
 	$CanvasLayer/Menu.hide()
 	$LevelMap.show()
 	var level_nodes = get_tree().get_nodes_in_group("Levels")
