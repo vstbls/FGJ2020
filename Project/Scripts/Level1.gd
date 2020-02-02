@@ -19,7 +19,7 @@ func _on_Timer_timeout():
 	if firstStage:
 		if abs(curPos.x-tomPos.x)<0.5 and abs(curPos.y-tomPos.y)<0.5:
 			stars = 1
-		$Timer.wait_time = 3
+		$Timer.wait_time = 3.1
 		$Timer.start()
 		firstStage = false
 	else:
