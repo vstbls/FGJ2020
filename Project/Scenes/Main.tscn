@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Scenes/MainMenu.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scripts/SceneLoader.gd" type="Script" id=2]
@@ -7,11 +7,14 @@
 [ext_resource path="res://Scenes/PartShop.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scenes/LevelMap.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scenes/Transition.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scenes/PauseButton.tscn" type="PackedScene" id=8]
 
 [node name="Root" type="Node2D"]
+pause_mode = 2
 script = ExtResource( 3 )
 
 [node name="SceneLoader" type="Node2D" parent="."]
+pause_mode = 1
 script = ExtResource( 2 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="SceneLoader"]
@@ -30,6 +33,9 @@ visible = false
 layer = 2
 
 [node name="SimulationButton" parent="ButtonLayer" instance=ExtResource( 4 )]
+
+[node name="PauseButton" parent="ButtonLayer" instance=ExtResource( 8 )]
+pause_mode = 2
 
 [node name="TransitionLayer" type="CanvasLayer" parent="."]
 layer = 11

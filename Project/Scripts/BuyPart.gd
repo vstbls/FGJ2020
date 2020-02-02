@@ -43,7 +43,7 @@ func _on_ShopButton_pressed(btnName):
 	inst.position = get_global_mouse_position()
 	inst.isDraggable = true
 	inst.get_node("RigidBody2D").set_pickable(true)
-	inst.modulate = Color(1,0,0)
+	inst.modulate = Color(rand_range(0.8, 1),rand_range(0, 0.3),rand_range(0, 0.3))
 	inst.can_drag = true
 	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 	pass # Replace with function body.
