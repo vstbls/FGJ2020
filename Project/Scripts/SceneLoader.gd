@@ -28,3 +28,23 @@ func unload_current_scene():
 		for child in $CanvasLayer.get_children():
 			child.call_deferred("free")
 	emit_signal("scene_changed")
+
+func hide_buttons():
+	var buttonLayer = get_node("/root/Root/ButtonLayer")
+	var canvasLayer = get_node("/root/Root/CanvasLayer")
+	var simButton = buttonLayer.get_node("SimulationButton")
+	simButton.get_node("PlayResetButton").set_pressed(false)
+	simButton.get_node("SpeedButton").set_pressed(false)
+	simButton.isStart = true
+	Engine.time_scale = 1
+	simButton.isDefaultSpeed = true
+	simButton.hide()
+	buttonLayer.get_node("PauseButton").hide()
+	canvasLayer.get_node("PartShop").hide()
+	
+func show_buttons():
+	var buttonLayer = get_node("/root/Root/ButtonLayer")
+	var canvasLayer = get_node("/root/Root/CanvasLayer")
+	buttonLayer.get_node("SimulationButton").show()
+	buttonLayer.get_node("PauseButton").show()
+	canvasLayer.get_node("PartShop").show()
