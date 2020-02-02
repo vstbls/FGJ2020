@@ -61,7 +61,7 @@ func _on_pauseMenu_open_MainMenu():
 	get_tree().paused = false
 	var pMenu = get_node("ButtonLayer/PauseMenu")
 	$SceneLoader.unload_current_scene()
-	$CanvasLayer/Menu.show()
+	$LevelMap.show()
 	$CanvasLayer/PartShop.hide()
 	$ButtonLayer/PauseButton.hide()
 	$ButtonLayer/SimulationButton/PlayResetButton.set_pressed(false)
