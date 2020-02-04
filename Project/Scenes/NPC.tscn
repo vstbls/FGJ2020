@@ -22,8 +22,8 @@ animations = [ {
 } ]
 
 [sub_resource type="CapsuleShape2D" id=2]
-radius = 3.0
-height = 6.0
+radius = 3.00889
+height = 5.94012
 
 [node name="NPC" type="Node2D" groups=[
 "Blocks",
@@ -42,7 +42,7 @@ __meta__ = {
 position = Vector2( 0, -2.5 )
 frames = SubResource( 1 )
 animation = "idle"
-frame = 3
+frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
@@ -50,5 +50,4 @@ position = Vector2( 0, -1.5 )
 shape = SubResource( 2 )
 
 [node name="BloodEmitter" parent="RigidBody2D" instance=ExtResource( 7 )]
-visible = false
 [connection signal="body_entered" from="RigidBody2D" to="." method="_on_RigidBody2D_body_entered"]
