@@ -34,7 +34,7 @@ position = Vector2( 96, 112 )
 
 [node name="TetS" parent="Blocks" instance=ExtResource( 3 )]
 modulate = Color( 1, 0.843137, 0, 1 )
-position = Vector2( 56, 88 )
+position = Vector2( 64, 88 )
 
 [node name="Block_30x1" parent="Blocks" instance=ExtResource( 4 )]
 position = Vector2( 32, 128 )
@@ -42,7 +42,7 @@ isStatic = true
 
 [node name="TetZ" parent="Blocks" instance=ExtResource( 5 )]
 modulate = Color( 1, 0.843137, 0, 1 )
-position = Vector2( 96, 88 )
+position = Vector2( 88, 88 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 layer = -5
