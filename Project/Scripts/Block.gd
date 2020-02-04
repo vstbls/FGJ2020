@@ -7,14 +7,14 @@ var preventDouble = false
 var timer = 0
 
 func _ready():
+
 	$RigidBody2D.mode = RigidBody2D.MODE_STATIC
+	
 	var mass = 0
 	for node in $RigidBody2D.get_children():
 		if(node.is_class("Sprite")):
 			mass += 1
 	$RigidBody2D.mass = clamp(mass, 1, 100)
-	set_process(true)
-	pass
 
 func on_Block_enablePhysics():
 	if(!isStatic):
@@ -27,6 +27,7 @@ func _on_RigidBody2D_input_event(viewport, event, shape_idx):
 			can_drag = true
 			timer = 0
 			Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
+			get_node("/root/Root/").currentBlock = self
 
 func _process(delta):
 	if can_drag:
@@ -47,14 +48,17 @@ func _process(delta):
 func _input(event):
 	if event is InputEventMouseButton:
 		if Input.is_mouse_button_pressed(BUTTON_RIGHT) and can_drag:
-			rotation_degrees += 90
-			if(rotation_degrees == 360):
-				rotation_degrees = 0
+			rotateBlock()
 		elif Input.is_mouse_button_pressed(BUTTON_LEFT) and can_drag:
 			can_drag = false
 			preventDouble = true
-			
+			get_node("/root/Root").currentBlock = null
 			var currentMousePos = get_global_mouse_position()
 			if(currentMousePos.x > 170 && currentMousePos.y < 50):
 				call_deferred("free")
 			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+			
+func rotateBlock():
+	rotation_degrees += 90
+	if(rotation_degrees == 360):
+		rotation_degrees = 0

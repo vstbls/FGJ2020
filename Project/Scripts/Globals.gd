@@ -14,6 +14,8 @@ var levelmsgs = {
 }
 var dialogue = preload("res://Scenes/Dialogue.tscn")
 
+var platform = OS.get_name()
+
 func save_game():
 	var save_file = File.new()
 	save_file.open("user://savegame.save", File.WRITE)

@@ -53,7 +53,6 @@ layer = 11
 position = Vector2( 0.440125, 0.880249 )
 
 [node name="Music" type="Node2D" parent="."]
-editor/display_folded = true
 
 [node name="MenuMusic" type="AudioStreamPlayer" parent="Music"]
 stream = ExtResource( 9 )

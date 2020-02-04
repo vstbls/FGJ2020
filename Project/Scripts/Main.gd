@@ -1,5 +1,7 @@
 extends Node2D
 
+var currentBlock
+
 func _ready():
 	OS.window_size = Vector2(OS.window_size.x * 3, OS.window_size.y * 3)
 	$ButtonLayer/SimulationButton.hide()
@@ -11,6 +13,8 @@ func _ready():
 	$ButtonLayer/PauseButton.connect("pause_game", self, "_on_PauseButton_pressed")
 	Globals.load_game()
 	$Music/MenuMusic.play()
+	
+	print(Globals.platform)
 	pass
 
 
