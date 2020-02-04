@@ -25,7 +25,6 @@ func _on_TextureButton_pressed():
 
 
 func _on_SpeedButton_pressed():
-	var timer = currentLevelNode.get_node("Timer")
 	if(isDefaultSpeed):
 		Engine.time_scale = 2
 		isDefaultSpeed = false

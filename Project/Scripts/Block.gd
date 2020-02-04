@@ -19,7 +19,7 @@ func _ready():
 func on_Block_enablePhysics():
 	if(!isStatic):
 		$RigidBody2D.mode = RigidBody2D.MODE_RIGID
-	
+		$RigidBody2D.add_central_force(Vector2(0.01,0.01))
 
 func _on_RigidBody2D_input_event(viewport, event, shape_idx):
 	if $RigidBody2D.mode == RigidBody2D.MODE_STATIC and isDraggable:
