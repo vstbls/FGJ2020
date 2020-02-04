@@ -4,9 +4,9 @@ var isStart = true
 var isDefaultSpeed = true
 var currentLevelNode
 
-#func reset_buttons():
-#	$PlayResetButton.pressed = false
-#	$SpeedButton.pressed = false
+func reset_buttons():
+	$PlayResetButton.pressed = false
+	$SpeedButton.pressed = false
 #	^^ broken or something, see globals
 
 func _on_TextureButton_pressed():

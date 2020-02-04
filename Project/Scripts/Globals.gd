@@ -54,5 +54,5 @@ func restart_level():
 	countDown.wait_time = current_level_node.timeLeft
 	
 	get_node("/root/Root/ButtonLayer/SimulationButton").isStart = true
-#	get_node("/root/Root/ButtonLayer/SimulationButton").reset_buttons()
+	get_node("/root/Root/ButtonLayer/SimulationButton").reset_buttons()
 #	^^ breaks shit for some reason, probably some random assignments elsewhere

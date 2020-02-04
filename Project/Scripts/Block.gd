@@ -42,7 +42,6 @@ func _process(delta):
 			position.x += (8-x)
 		position.y -= y
 		blockPos = position
-		print(str(blockPos))
 	elif preventDouble:
 		timer += delta
 		if(timer > 0.05):

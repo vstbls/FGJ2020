@@ -8,6 +8,7 @@ func timer(t):
 
 func set_victory(starCount):
 	Engine.time_scale = 1
+	get_node("/root/Root/ButtonLayer/SimulationButton").isDefaultSpeed = true
 	if starCount >= 1:
 		yield(timer(0.5), "timeout")
 		$Bg/Stars/Star1.get_star()
