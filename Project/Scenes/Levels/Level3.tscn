@@ -71,7 +71,7 @@ wait_time = 2.0
 one_shot = true
 
 [node name="NPC" parent="." instance=ExtResource( 9 )]
-position = Vector2( 96, 115 )
+position = Vector2( 96, 116.5 )
 
 [node name="Countdown" type="Timer" parent="."]
 

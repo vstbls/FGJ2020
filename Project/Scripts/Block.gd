@@ -5,6 +5,7 @@ export var isDraggable = false
 var can_drag = false
 var preventDouble = false
 var timer = 0
+var blockPos
 
 func _ready():
 
@@ -40,6 +41,8 @@ func _process(delta):
 		else:
 			position.x += (8-x)
 		position.y -= y
+		blockPos = position
+		print(str(blockPos))
 	elif preventDouble:
 		timer += delta
 		if(timer > 0.05):

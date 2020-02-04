@@ -45,13 +45,14 @@ wait_time = 2.0
 one_shot = true
 
 [node name="NPC" parent="." instance=ExtResource( 8 )]
-position = Vector2( 72, 16 )
+position = Vector2( 64, 16.5 )
 
 [node name="Line2D" type="Line2D" parent="."]
 position = Vector2( 88, 48 )
 points = PoolVector2Array( -72, 16, 104, 16 )
 width = 1.0
 default_color = Color( 1, 0, 0, 1 )
+texture_mode = 941703755
 
 [node name="TimeLeft" type="Label" parent="."]
 margin_left = 28.0
