@@ -2,10 +2,10 @@
 
 [ext_resource path="res://Scripts/LevelComplete.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/9patch_white.png" type="Texture" id=2]
-[ext_resource path="res://Scenes/Star.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Sprites/button_unpressed.png" type="Texture" id=4]
-[ext_resource path="res://Sprites/button_pressed.png" type="Texture" id=5]
-[ext_resource path="res://Fonts/PixelFont2.tres" type="DynamicFont" id=6]
+[ext_resource path="res://Sprites/button_unpressed.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/button_pressed.png" type="Texture" id=4]
+[ext_resource path="res://Fonts/PixelFont2.tres" type="DynamicFont" id=5]
+[ext_resource path="res://Scenes/Star.tscn" type="PackedScene" id=6]
 
 [node name="LevelComplete" type="Control"]
 anchor_right = 1.0
@@ -42,8 +42,8 @@ margin_left = -35.0
 margin_top = -18.0
 margin_right = 35.0
 margin_bottom = 24.0
-texture_normal = ExtResource( 4 )
-texture_pressed = ExtResource( 5 )
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -51,7 +51,7 @@ __meta__ = {
 [node name="Label" type="Label" parent="Bg/TextureButton"]
 margin_right = 70.0
 margin_bottom = 13.0
-custom_fonts/font = ExtResource( 6 )
+custom_fonts/font = ExtResource( 5 )
 custom_colors/font_color_shadow = Color( 0.133333, 0.12549, 0.203922, 0.639216 )
 custom_constants/shadow_offset_x = 0
 text = "Cool!"
@@ -68,7 +68,7 @@ margin_left = -42.5
 margin_top = 10.0
 margin_right = 42.5
 margin_bottom = 14.0
-custom_fonts/font = ExtResource( 6 )
+custom_fonts/font = ExtResource( 5 )
 custom_colors/font_color = Color( 0.133333, 0.12549, 0.203922, 1 )
 text = "LEVEL COMPLETE!"
 align = 1
@@ -85,7 +85,7 @@ margin_left = -46.5
 margin_top = -33.0
 margin_right = 46.5
 margin_bottom = -19.0
-custom_fonts/font = ExtResource( 6 )
+custom_fonts/font = ExtResource( 5 )
 custom_colors/font_color = Color( 0.192157, 0.184314, 0.258824, 1 )
 text = "Blocks used: n"
 align = 1
@@ -107,20 +107,20 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Star1" parent="Bg/Stars" instance=ExtResource( 3 )]
+[node name="Star1" parent="Bg/Stars" instance=ExtResource( 6 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_right = 32.0
 margin_bottom = 38.0
 
-[node name="Star2" parent="Bg/Stars" instance=ExtResource( 3 )]
+[node name="Star2" parent="Bg/Stars" instance=ExtResource( 6 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 36.0
 margin_right = 68.0
 margin_bottom = 38.0
 
-[node name="Star3" parent="Bg/Stars" instance=ExtResource( 3 )]
+[node name="Star3" parent="Bg/Stars" instance=ExtResource( 6 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 72.0
