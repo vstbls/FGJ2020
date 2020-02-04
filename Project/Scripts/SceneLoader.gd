@@ -13,6 +13,7 @@ func change_scene(scene):
 	get_node("/root/Root/TransitionLayer/Transition").transition()
 	yield(get_node("/root/Root/TransitionLayer/Transition"), "change_the_scene_right_now")
 	var simBtn = get_node("/root/Root/ButtonLayer/SimulationButton")
+	Globals.current_level_node = instanced_scene
 	simBtn.currentLevelNode = instanced_scene
 	if $CanvasLayer.get_child_count() != 0:
 		#var prev_scene = get_node("Level")
