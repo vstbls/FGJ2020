@@ -6,19 +6,15 @@ func set_text(text):
 func timer(t):
 	return get_tree().create_timer(t)
 
-func _ready():
-	print("LevelComplete READY")
-	print(get_path())
-
 func set_victory(starCount):
 	if starCount >= 1:
-		yield(timer(1), "timeout")
+		yield(timer(0.5), "timeout")
 		$Bg/Stars/Star1.get_star()
 	if starCount >= 2:
-		yield(timer(1), "timeout")
+		yield(timer(0.5), "timeout")
 		$Bg/Stars/Star2.get_star()
 	if starCount >= 3:
-		yield(timer(1), "timeout")
+		yield(timer(0.5), "timeout")
 		$Bg/Stars/Star3.get_star()
 #	var starSprite = load("res://Sprites/star_big.png")
 #	match starCount:

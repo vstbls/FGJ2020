@@ -33,7 +33,6 @@ func _on_Timer_timeout():
 		var complete_instance = levelComplete.instance()
 		complete_instance.set_text("Blocks used: " + str(blockCount))
 		get_node("/root/Root/TransitionLayer").add_child(complete_instance)
-		print("SHIT INSTANCIATED")
 		get_node("/root/Root/TransitionLayer/LevelComplete").set_victory(stars)
 		if Globals.levelstats["Level1"].stars < stars: Globals.levelstats["Level1"].stars = stars
 
