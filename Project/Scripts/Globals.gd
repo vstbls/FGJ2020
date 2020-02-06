@@ -8,7 +8,7 @@ var levelstats = {
 }
 var levelmsgs = {
 	"Level1": "Tom: Please... just make the tower stop collapsing on me...\nStars:\n*: Keep Tom alive for 2s\n**: 5 seconds\n***: 5 seconds - using one block",
-	"Level2": "Tom: Please... This tower I climbed is about to collapse...\nStars:\n*: Keep Tom above line for 2s\n**: 5 seconds\n***: 5 s - using < 4 blocks",
+	"Level2": "Tom: Please... This tower I climbed is about to collapse...\nStars:\n*: Keep Tom above line for 2s\n**: 5 seconds\n***: 5 s - using < 3 blocks",
 	"Level3": "Tom: Please... my attic is too heavily loaded!...\nStars:\n*: Keep Tom alive for 2s\n**: 5 seconds\n***: 5 s - using one block",
 	"Level4": "Tom: Please... stop my fall before terminal velocity...\nStars:\n*: Keep Tom above line for 2s\n**: 5 seconds\n***: 5 s - using < 6 blocks"
 }

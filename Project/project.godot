@@ -15,9 +15,10 @@ _global_script_class_icons={
 
 [application]
 
-config/name="FGJ2020"
+config/name="Tower Salvager!"
 run/main_scene="res://Scenes/Main.tscn"
-config/icon="res://icon.png"
+config/icon="res://Sprites/game.png"
+config/windows_native_icon="res://Sprites/game.ico"
 
 [autoload]
 
