@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Scripts/RotateButton.gd" type="Script" id=1]
+[ext_resource path="res://Sprites/pause_unpressed.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/pause_pressed.png" type="Texture" id=3]
+
+[node name="RotateButton" type="Control"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -248.0
+margin_top = -24.0
+margin_right = -232.0
+margin_bottom = -8.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Button" type="TextureButton" parent="."]
+margin_right = 16.0
+margin_bottom = 16.0
+texture_normal = ExtResource( 2 )
+texture_pressed = ExtResource( 3 )
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]

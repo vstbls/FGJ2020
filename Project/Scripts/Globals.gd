@@ -1,5 +1,7 @@
 extends Node
 
+var current_level_node
+
 var levelstats = {
 	"Level1": {"stars": 0},
 	"Level2": {"stars": 0},
@@ -13,6 +15,8 @@ var levelmsgs = {
 	"Level4": "Tom: Please... stop my fall before terminal velocity...\nStars:\n*: Keep Tom above line for 2s\n**: 5 seconds\n***: 5 s - using < 6 blocks"
 }
 var dialogue = preload("res://Scenes/Dialogue.tscn")
+
+var platform = OS.get_name()
 
 func save_game():
 	var save_file = File.new()
@@ -38,3 +42,17 @@ func quit_game():
 	yield(get_node("/root/Root/TransitionLayer/Transition"), "change_the_scene_right_now")
 	get_tree().quit()
 	pass
+	
+func restart_level():
+	var sceneLoader = get_node("/root/Root/SceneLoader")
+	sceneLoader.change_scene(sceneLoader.currentScene)
+	var timer = current_level_node.get_node("Timer")
+	var countDown = current_level_node.get_node("Countdown")
+	timer.stop()
+	timer.wait_time = current_level_node.timeOut
+	countDown.stop()
+	countDown.wait_time = current_level_node.timeLeft
+	
+	get_node("/root/Root/ButtonLayer/SimulationButton").isStart = true
+	get_node("/root/Root/ButtonLayer/SimulationButton").reset_buttons()
+#	^^ breaks shit for some reason, probably some random assignments elsewhere

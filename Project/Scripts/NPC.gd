@@ -7,3 +7,7 @@ func _on_RigidBody2D_body_entered(body):
 		$RigidBody2D/BloodEmitter/Particles2D.set_emitting(true)
 		$RigidBody2D/Sprite.play("dead")
 	pass
+	
+	
+func _process(delta):
+	$RigidBody2D/BloodEmitter.rotation_degrees = -$RigidBody2D.rotation_degrees

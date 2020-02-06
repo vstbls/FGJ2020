@@ -2,7 +2,6 @@
 
 [sub_resource type="ParticlesMaterial" id=1]
 flag_disable_z = true
-direction = Vector3( 0, -1, 0 )
 spread = 102.93
 gravity = Vector3( 0, 99, 0 )
 initial_velocity = 50.12

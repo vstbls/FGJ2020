@@ -1,8 +1,7 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Fonts/PixelFont2.tres" type="DynamicFont" id=1]
-[ext_resource path="res://Sprites/button_pressed.png" type="Texture" id=2]
-[ext_resource path="res://Sprites/button_unpressed.png" type="Texture" id=3]
+[ext_resource path="res://Scenes/Button.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scripts/Dialogue.gd" type="Script" id=4]
 [ext_resource path="res://Sprites/9patch_gray.png" type="Texture" id=5]
 [ext_resource path="res://Sprites/9patch_white.png" type="Texture" id=6]
@@ -67,7 +66,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="TextureButton" type="TextureButton" parent="Panel"]
+[node name="Button" parent="Panel" instance=ExtResource( 2 )]
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
@@ -75,23 +74,10 @@ anchor_bottom = 1.0
 margin_left = -35.0
 margin_top = -17.0
 margin_right = 35.0
-margin_bottom = 25.0
-texture_normal = ExtResource( 3 )
-texture_pressed = ExtResource( 2 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+margin_bottom = -3.0
 
-[node name="Label" type="Label" parent="Panel/TextureButton"]
-margin_right = 70.0
-margin_bottom = 13.0
-custom_fonts/font = ExtResource( 1 )
-custom_colors/font_color_shadow = Color( 0, 0, 0, 0.45098 )
-custom_constants/shadow_offset_x = 0
+[node name="Label" parent="Panel/Button" index="0"]
 text = "Okay!"
-align = 1
-valign = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
-[connection signal="pressed" from="Panel/TextureButton" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Panel/Button" to="." method="_on_button_pressed"]
+
+[editable path="Panel/Button"]

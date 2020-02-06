@@ -1,63 +1,64 @@
 [gd_scene load_steps=10 format=2]
 
-[ext_resource path="res://Scenes/TetBlocks/TetL.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Scripts/Level4.gd" type="Script" id=2]
-[ext_resource path="res://Scenes/TetBlocks/Block_30x1.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Scenes/NPC.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Scenes/Background.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Scenes/TetBlocks/TetS.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Scenes/TetBlocks/TetZ.tscn" type="PackedScene" id=7]
-[ext_resource path="res://Scenes/TetBlocks/TetT.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Fonts/PixelFont2.tres" type="DynamicFont" id=10]
+[ext_resource path="res://Scripts/Level4.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/TetBlocks/Block_30x1.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/TetBlocks/TetS.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/TetBlocks/TetZ.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/TetBlocks/TetT.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/TetBlocks/TetL.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/Background.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scenes/NPC.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Fonts/PixelFont2.tres" type="DynamicFont" id=9]
 
 [node name="Node2D" type="Node2D"]
-script = ExtResource( 2 )
+script = ExtResource( 1 )
 
 [node name="Blocks" type="Node2D" parent="."]
 
-[node name="Block_30x1" parent="Blocks" instance=ExtResource( 3 )]
+[node name="Block_30x1" parent="Blocks" instance=ExtResource( 2 )]
 position = Vector2( 32, 128 )
 isStatic = true
 
-[node name="TetS" parent="Blocks" instance=ExtResource( 6 )]
+[node name="TetS" parent="Blocks" instance=ExtResource( 3 )]
 modulate = Color( 1, 0.843137, 0, 1 )
-position = Vector2( 88, 104 )
+position = Vector2( 96, 112 )
 
-[node name="TetZ" parent="Blocks" instance=ExtResource( 7 )]
+[node name="TetZ" parent="Blocks" instance=ExtResource( 4 )]
 modulate = Color( 1, 0.584314, 0, 1 )
-position = Vector2( 56, 104 )
+position = Vector2( 56, 112 )
 
-[node name="TetT" parent="Blocks" instance=ExtResource( 8 )]
+[node name="TetT" parent="Blocks" instance=ExtResource( 5 )]
 modulate = Color( 1, 0.843137, 0, 1 )
-position = Vector2( 72, 112 )
+position = Vector2( 72, 120 )
 
-[node name="TetL" parent="Blocks" instance=ExtResource( 1 )]
-position = Vector2( 72, 104 )
+[node name="TetL" parent="Blocks" instance=ExtResource( 6 )]
+position = Vector2( 80, 96 )
 rotation = -1.5708
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 layer = -5
 
-[node name="Background" parent="CanvasLayer" instance=ExtResource( 5 )]
+[node name="Background" parent="CanvasLayer" instance=ExtResource( 7 )]
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 2.0
 one_shot = true
 
-[node name="NPC" parent="." instance=ExtResource( 4 )]
-position = Vector2( 72, 16 )
+[node name="NPC" parent="." instance=ExtResource( 8 )]
+position = Vector2( 64, 16.5 )
 
 [node name="Line2D" type="Line2D" parent="."]
 position = Vector2( 88, 48 )
 points = PoolVector2Array( -72, 16, 104, 16 )
 width = 1.0
 default_color = Color( 1, 0, 0, 1 )
+texture_mode = 941703755
 
 [node name="TimeLeft" type="Label" parent="."]
 margin_left = 28.0
 margin_top = 4.0
 margin_bottom = 14.0
-custom_fonts/font = ExtResource( 10 )
+custom_fonts/font = ExtResource( 9 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 0.529412 )
 text = "Time left :"
